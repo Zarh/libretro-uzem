@@ -21,6 +21,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
+
+#ifdef __CELLOS_LV2__
+#include <unistd.h>
+#endif
+
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
@@ -129,7 +134,7 @@ int SDEmu::init_with_directory(const char *path) {
 			toc[i].cluster_no = freecluster;
 
 			//Fill the FAT with the file's cluster chain
-			int fileClustersCount=ceil(st.st_size / (bootsector.sectors_per_cluster * 512.0f));
+			int fileClustersCount=(int)ceil(st.st_size / (bootsector.sectors_per_cluster * 512.0f));
 			for(int j=freecluster;j<(freecluster+fileClustersCount-1);j++){
 				clusters[j]=j+1;
 			}

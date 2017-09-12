@@ -28,7 +28,9 @@ THE SOFTWARE.
 #include "uzem.h"
 #include "avr8.h"
 #include "uzerom.h"
+#ifndef __CELLOS_LV2__
 #include <getopt.h>
+#endif
 #include <limits.h>
 #include <string.h>
 #include <stdlib.h>
@@ -121,16 +123,16 @@ static cpu_state_buf_t cpu_state_buf;
 void retro_get_system_av_info(struct retro_system_av_info *info)
 {
 	info->timing = (struct retro_system_timing){
-		.fps = 2 * 29.97,
-		.sample_rate = AUDIO_FREQUENCY,
+		/*.fps = */2 * 29.97,
+		/*.sample_rate = */AUDIO_FREQUENCY,
 	};
 
 	info->geometry = (struct retro_game_geometry){
-		.base_width = 720,
-		.base_height = 448,
-		.max_width = 720,
-		.max_height = 448,
-		.aspect_ratio = 630.0/448.0,
+		/*.base_width = */720,
+		/*.base_height = */448,
+		/*.max_width = */720,
+		/*.max_height = */448,
+		/*.aspect_ratio = */630.0/448.0,
 	};
 }
 

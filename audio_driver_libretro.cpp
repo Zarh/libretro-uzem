@@ -42,7 +42,7 @@ static void audio_driver_libretro_push(uint8_t value)
 }
 
 audio_driver_t audio_driver_libretro = {
-    .init = audio_driver_libretro_init,
-	.flush = audio_driver_libretro_flush,
-	.push = audio_driver_libretro_push
+    /*.init = */  audio_driver_libretro_init,
+	/*.flush = */ audio_driver_libretro_flush,
+	/*.push = */  audio_driver_libretro_push
 };

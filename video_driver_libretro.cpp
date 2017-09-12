@@ -65,15 +65,15 @@ static void video_driver_libretro_screenshot(char *filename)
 }
 
 video_driver_t video_driver_libretro = {
-    .width = 720,
-    .height = 448,
-    .framebuffer = NULL,
-    .stride = 0,
-    .init = video_driver_libretro_init,
-    .map_rgb = video_driver_libretro_map_rgb,
-	.render_line = video_driver_libretro_render_line,
-	.update_frame = video_driver_libretro_update_frame,
-	.record_frame = video_driver_libretro_record_frame,
-	.screenshot = video_driver_libretro_screenshot,
-	.update_mouse = video_driver_libretro_update_mouse
+    /*.width = */720,
+    /*.height = */448,
+    /*.framebuffer = */NULL,
+    /*.stride = */0,
+    /*.init = */video_driver_libretro_init,
+    /*.map_rgb = */video_driver_libretro_map_rgb,
+	/*.render_line = */video_driver_libretro_render_line,
+	/*.update_frame = */video_driver_libretro_update_frame,
+	/*.record_frame = */video_driver_libretro_record_frame,
+	/*.screenshot = */video_driver_libretro_screenshot,
+	/*.update_mouse = */video_driver_libretro_update_mouse
 };

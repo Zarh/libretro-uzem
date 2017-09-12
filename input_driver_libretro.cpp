@@ -102,14 +102,14 @@ static void input_driver_libretro_joystick_close(int idx)
 }
 
 input_driver_t input_driver_libretro = {
-	.buttons = { 0 },
-	.mouse_scale = 1,
-	.pad_mode = SNES_PAD,
-    .poll = input_driver_libretro_poll,
-	.wait = input_driver_libretro_wait,
-	.get_mouse_state = input_driver_libretro_get_mouse_state,
-	.joystick_init = input_driver_libretro_joystick_init,
-	.joystick_shutdown = input_driver_libretro_joystick_shutdown,
-	.joystick_open = input_driver_libretro_joystick_open,
-	.joystick_close = input_driver_libretro_joystick_close,
+	/*.buttons = */{ 0 },
+	/*.mouse_scale = */1,
+	/*.pad_mode = */SNES_PAD,
+    /*.poll = */input_driver_libretro_poll,
+	/*.wait = */input_driver_libretro_wait,
+	/*.get_mouse_state = */input_driver_libretro_get_mouse_state,
+	/*.joystick_init = */input_driver_libretro_joystick_init,
+	/*.joystick_shutdown = */input_driver_libretro_joystick_shutdown,
+	/*.joystick_open = */input_driver_libretro_joystick_open,
+	/*.joystick_close = */input_driver_libretro_joystick_close,
 };
